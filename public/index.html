@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buckaru Hyper-Charge | GME x Pokémon Limited Drop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div class="lightning-overlay" id="lightning-overlay"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="brand">
+                <img src="assets/logo.jpeg" alt="Buckaru Logo" class="nav-logo">
+                <div class="logo-text">BUCKARU <span>HYPER-CHARGE</span></div>
+            </div>
+            <div class="countdown" id="countdown">LOADING DROP...</div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="banner-container">
+            <img src="assets/banner.jpeg" alt="Buckaru Banner" class="hero-banner">
+        </div>
+
+        <section class="hero">
+            <div class="card-container">
+                <div class="pokemon-card" id="main-card">
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span class="type-icon">⚡</span>
+                            <span class="pokemon-name">BUCKARU</span>
+                            <span class="hp">120 HP</span>
+                        </div>
+                        <div class="sprite-container" id="sprite-trigger">
+                            <img src="assets/buckaru_hero.png" alt="Buckaru" class="buckaru-sprite" id="buckaru-img">
+                            <div class="particles-overlay" id="particles"></div>
+                        </div>
+                        <div class="card-info">
+                            <div class="ability">
+                                <span class="ability-label">Ability</span>
+                                <span class="ability-name">HODL</span>
+                            </div>
+                            <p class="ability-desc">Forces the community to never let go. Increases hype by 69% every click.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <span>Weakness: 🧻</span>
+                                <span>Resistance: 💎</span>
+                                <span>Retreat: 0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interaction-zone">
+                <h1 class="bold-text">SPARK THE DROP</h1>
+                <p class="hero-sub">Get ready for the Feb 12 Pokémon drop. Click Buckaru to reveal the secret.</p>
+                
+                <div class="meter-container">
+                    <div class="meter-label">
+                        <span>GLOBAL SPARK POWER</span>
+                        <span id="meter-percent">0%</span>
+                    </div>
+                    <div class="meter-bar">
+                        <div class="meter-fill" id="meter-fill"></div>
+                    </div>
+                </div>
+
+                <div class="ca-section" id="ca-copier">
+                    <span class="ca-label">CONTRACT ADDRESS:</span>
+                    <div class="ca-pill">
+                        <code id="ca-value">0x0000000000000000000000000</code>
+                        <button class="copy-btn">COPY</button>
+                    </div>
+                </div>
+
+                <div class="socials-container">
+                    <a href="https://x.com/buckaruoneth" target="_blank" class="social-link x-link" title="Follow on X">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>
+                    </a>
+                    <a href="https://t.me/Buckarueth" target="_blank" class="social-link tg-link" title="Join Telegram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.01-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36 0-1.04-.2-1.55-.37-.63-.2-1.13-.31-1.08-.66.02-.18.27-.36.74-.55 2.91-1.27 4.85-2.11 5.84-2.5 2.79-1.11 3.37-1.3 3.75-1.3.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .33z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reward Modal -->
+        <div class="reward-modal-overlay" id="reward-modal">
+            <div class="reward-modal-content glass-white">
+                <button class="modal-close" id="modal-close">×</button>
+                <div class="modal-header">
+                    <h2>FULLY CHARGED!</h2>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/buckaru_diamond.png" alt="Diamond Buckaru" class="modal-sprite">
+                    <h3 class="diamond-text">DIAMOND HANDS UNLOCKED</h3>
+                    <p>Buckaru has reached his peak power. The February 12 drop is inevitable.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" id="modal-ok">HODL ON</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="light-footer">
+        <div class="footer-content">
+            <img src="assets/logo.jpeg" alt="Logo" class="footer-logo">
+            <p>© 2026 THE BUCKARU TEAM x GAMESTOP. FEB 12 DROP.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
