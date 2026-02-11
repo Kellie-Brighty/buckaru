@@ -3,34 +3,6 @@ let sparkCount = 0;
 const targetSparks = 1000;
 let isDiamondHandsRevealed = false;
 
-// --- Countdown ---
-function initCountdown() {
-  const display = document.getElementById("countdown");
-  const targetDate = new Date("February 12, 2026 00:00:00").getTime();
-
-  function update() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (distance < 0) {
-      display.innerText = "DROP LIVE! HODL!";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-    );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    display.innerText = `DROP IN: ${days}D ${hours}H ${minutes}M ${seconds}S`;
-  }
-
-  update();
-  setInterval(update, 1000);
-}
-
 // --- Lightning Particles ---
 function createLightningParticle(x, y) {
   const container = document.getElementById("particles");
@@ -142,7 +114,6 @@ function initCACopier() {
 
 // --- Init All ---
 window.onload = () => {
-  initCountdown();
   initCACopier();
 
   document.getElementById("sprite-trigger").addEventListener("click", handleSpark);
